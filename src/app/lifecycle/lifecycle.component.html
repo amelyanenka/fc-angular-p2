@@ -1,0 +1,5 @@
+<br>
+<input type="text" #fruitInput>
+<button (click)="addFruit(fruitInput.value)">Add Fruit</button>
+<app-lifecycle-item [incomingArray]="fruits" *ngIf="active"></app-lifecycle-item>
+<button (click)="active = !active">Destroy</button>

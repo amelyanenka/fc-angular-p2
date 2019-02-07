@@ -1,0 +1,16 @@
+<form [formGroup]="userFormGroup">
+  <div>
+      <p *ngIf="userNameControl.errors?.required">*Required</p>
+    <input type="text" [formControl]="userNameControl">
+  </div>
+  <div>
+    <p *ngIf="emailControl.errors?.required || emailControl.errors?.email">*Incorrect email</p>
+    <input type="text" [formControl]="emailControl">
+  </div>
+  <div>
+    <label>Send Emails</label>
+    <input type="checkbox" [formControl]="sendEmailsControl">
+  </div>
+</form>
+<h1>Full data: {{fullData}}</h1>
+<button (click)="submitForm()"> Submit </button>

@@ -1,0 +1,9 @@
+<div class="row">
+  <div>
+    <b>{{ account.name }}</b>
+    <hr>
+    <p>This account is {{ account.status }}</p>
+    <button (click)="onReportTo(account.status)">Report the status</button>
+    <button (click)="deactivate(id)">Deactivate</button>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<br>
+<input type="text" #fruitInput maxlength="1">
+<button (click)="changeFilter(fruitInput.value)">Filter by char</button>
+<div class="fruitCont">
+  <div>
+    <h3>Filtered</h3>
+    <p *ngFor="let fruit of fruitArray | fruitFilter: char">{{fruit}}</p>
+  </div>
+  <div>
+      <h3>Raw</h3>
+    <p *ngFor="let fruit of fruitArray">{{fruit}}</p>
+  </div>
+</div>
+
